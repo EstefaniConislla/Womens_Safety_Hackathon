@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styleanimation.css">
+    <script src="js/scriptanimation.js"></script>
+</head>
+<body>
+    <img name="slider" width="900" height="500">
+
+    <script>
+        window.addEventListener('load', function(){
+
+            var imagenes = [];
+
+            imagenes[0] = 'images/doxx/descarga (1).jfif';
+            imagenes[1] = 'images/doxx/doxing-methods-featured.jpg';
+            imagenes[2] = 'images/doxx/Doxing-violacion-privacidad.png';
+            imagenes[3] = 'images/doxx/doxing.jpg'
+            imagenes[4] = 'images/doxx/hombre-practicando-doxing.jpg'
+
+            var indiceImagenes = 0;
+            var tiempo = 1000;
+
+            function cambiarImagenes(){
+                document.slider.src = imagenes[indiceImagenes]
+
+                if(indiceImagenes <= 3){
+                    indiceImagenes++;
+                }else{
+                    indiceImagenes=0;
+                }
+            }
+
+            setInterval(cambiarImagenes, tiempo) 
+        });
+    </script>
+</body>
+</html>
